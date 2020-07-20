@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Kravolution</string>
+    <string name="classes">CLASSES</string>
+    <string name="first_onboarding_description">Praesent nec porta arcu.\n Duis quis purus nibh</string>
 </resources>
