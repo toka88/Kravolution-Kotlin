@@ -8,4 +8,42 @@
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
     </style>
+
+    <!--    Pedding-->
+    <style name="LargeSideMargins">
+        <item name="android:layout_marginStart">@dimen/padding_larger</item>
+        <item name="android:layout_marginEnd">@dimen/padding_larger</item>
+    </style>
+
+    <!--    Buttons     -->
+    <style name="PrimaryButton" parent="PrimaryActionTextType">
+        <item name="android:background">@drawable/button_primary</item>
+        <item name="android:layout_height">@dimen/button_height</item>
+    </style>
+
+    <style name="SecondaryButton" parent="PrimaryActionTextType">
+        <item name="android:background">@drawable/button_secondary</item>
+    </style>
+
+    <!--    EditText-->
+    <style name="BaseEditText" parent="InputTextType">
+        <item name="android:textColor">@color/lightTextColor</item>
+        <item name="android:backgroundTint">@color/lightTextColor</item>
+        <item name="android:textColorHint">@color/lightTextColor</item>
+        <item name="android:drawableTint">@color/lightTextColor</item>
+        <item name="android:paddingBottom">15dp</item>
+        <item name="android:paddingEnd">10dp</item>
+    </style>
+
+    <style name="NameEditText" parent="BaseEditText">
+        <item name="android:drawableEnd">@drawable/icon_name</item>
+    </style>
+
+    <style name="PasswordEditText" parent="BaseEditText">
+        <item name="android:drawableEnd">@drawable/icon_password</item>
+    </style>
+
+    <style name="EmailEditText" parent="BaseEditText">
+        <item name="android:drawableEnd">@drawable/icon_email</item>
+    </style>
 </resources>

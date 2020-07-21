@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--    Activity title -->
+    <style name="TitleTextType">
+        <item name="fontFamily">@font/gigalypse</item>
+        <item name="android:textSize">@dimen/font_size_extra_large</item>
+    </style>
+    
+    <!--  EditText -->
+    <style name="InputTextType">
+        <item name="fontFamily">@font/helvetica_neu</item>
+        <item name="android:textSize">@dimen/font_size_normal</item>
+    </style>
+
+    <!--    Info text-->
+    <style name="InfoTextType">
+        <item name="fontFamily">@font/helvetica_neu</item>
+        <item name="android:textSize">@dimen/font_size_extra_normal</item>
+    </style>
+
+    <!--    Use for primary and secondary button-->
+    <style name="PrimaryActionTextType">
+        <item name="fontFamily">@font/gigalypse</item>
+        <item name="android:textSize">@dimen/font_size_normal</item>
+        <item name="textAllCaps">true</item>
+    </style>
+</resources>
