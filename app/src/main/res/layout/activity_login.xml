@@ -4,28 +4,65 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.auth.LoginActivity"
-    style="@style/LargeSideMargins">
+    tools:context=".activities.auth.LoginActivity">
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingStart="@dimen/padding_larger"
+        android:paddingEnd="@dimen/padding_larger"
+        app:layout_constraintBottom_toTopOf="@+id/createAccountButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/emailEditText"
+            style="@style/EmailEditText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/editTextHeight"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
+
+        <EditText
+            android:id="@+id/passwordEditText"
+            style="@style/PasswordEditText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/editTextHeight"
+            android:drawableTint="@color/lightTextColor"
+            android:layout_below="@id/emailEditText"
+            android:layout_centerHorizontal="true" />
+
+        <Button
+            android:id="@+id/resetPasswordButton"
+            style="@style/UnderlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/underlined_button_height"
+            android:layout_below="@id/passwordEditText"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="@string/reset_password_button_title" />
+
+        <Button
+            android:id="@+id/signInButton"
+            style="@style/PrimaryButton"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_height"
+            android:layout_below="@id/resetPasswordButton"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:text="@string/sign_in_button_title" />
+    </RelativeLayout>
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/button_height"
-        android:text="Button"
+        android:id="@+id/createAccountButton"
+        style="@style/UnderlinedButton"
+        android:layout_width="wrap_content"
+        android:layout_height="25dp"
+        android:layout_marginBottom="50dp"
+        android:text="@string/create_account_button_title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        style="@style/PrimaryButton"
-        />
+        app:layout_constraintStart_toStartOf="parent" />
 
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/editTextHeight"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button"
-        style="@style/NameEditText"
-        android:hint="Username"
-        />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -2,4 +2,12 @@
     <string name="app_name">Kravolution</string>
     <string name="classes">CLASSES</string>
     <string name="first_onboarding_description">Praesent nec porta arcu.\n Duis quis purus nibh</string>
+    <string name="reset_password_button_title">Reset password</string>
+    <string name="sign_in_button_title">Sign in</string>
+    <string name="create_account_button_title">Create account</string>
+    <string name="username_edit_text_hint">Username</string>
+    <string name="email_edit_text_hint">Email</string>
+    <string name="password_edit_text_hint">Password</string>
+    <string name="sign_up_button_title">Sign up</string>
+    <string name="i_agree_to_the_terms_and_conditions">I agree to the terms and conditions</string>
 </resources>

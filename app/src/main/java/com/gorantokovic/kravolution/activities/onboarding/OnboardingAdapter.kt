@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.gorantokovic.kravolution.R
 
-class OnboardingAdapter() : RecyclerView.Adapter<OnboardingAdapter.OnboardingViewHolder>() {
+class OnboardingAdapter : RecyclerView.Adapter<OnboardingAdapter.OnboardingViewHolder>() {
 
     private val pageTypes: Array<OnboardingType> = arrayOf(
         OnboardingType.Classes,
@@ -19,7 +19,7 @@ class OnboardingAdapter() : RecyclerView.Adapter<OnboardingAdapter.OnboardingVie
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): OnboardingAdapter.OnboardingViewHolder {
+    ): OnboardingViewHolder {
         val view = LayoutInflater.from(parent.context)
             .inflate(R.layout.onboarding_page_layout, parent, false)
         return OnboardingViewHolder(view)
@@ -29,7 +29,7 @@ class OnboardingAdapter() : RecyclerView.Adapter<OnboardingAdapter.OnboardingVie
         return pageTypes.count()
     }
 
-    override fun onBindViewHolder(holder: OnboardingAdapter.OnboardingViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: OnboardingViewHolder, position: Int) {
         val pageType = pageTypes[position]
         holder.titleTextView.text = pageType.title()
         holder.descriptionTextView.text = pageType.description()
@@ -45,11 +45,11 @@ private enum class OnboardingType {
     Classes, Progress, Kit, KeepInformed;
 
     fun title(): String {
-        when (this) {
-            OnboardingType.Classes -> return "CLASSES"
-            OnboardingType.Progress -> return "PROGRESS"
-            OnboardingType.Kit -> return "KIT"
-            OnboardingType.KeepInformed -> return "KEEP\nINFORMED"
+        return when (this) {
+            Classes -> "CLASSES"
+            Progress -> "PROGRESS"
+            Kit -> "KIT"
+            KeepInformed -> "KEEP\nINFORMED"
         }
     }
 

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingLeft="@dimen/padding_larger"
+    android:paddingRight="@dimen/padding_larger">
+
+
+    <ImageView
+        android:id="@+id/profilePhotoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        tools:srcCompat="@tools:sample/avatars" />
+
+    <EditText
+        android:id="@+id/userNameEditText"
+        android:layout_width="match_parent"
+        android:layout_below="@id/profilePhotoImageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:hint="@string/username_edit_text_hint"
+        android:autofillHints="@string/username_edit_text_hint"
+        style="@style/NameEditText"
+         />
+
+    <EditText
+        android:id="@+id/emailEditText"
+        android:layout_width="match_parent"
+        android:layout_below="@id/userNameEditText"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/email_edit_text_hint"
+        android:autofillHints="@string/email_edit_text_hint"
+        style="@style/EmailEditText"
+        />
+
+    <EditText
+        android:id="@+id/passwordEditText"
+        android:layout_width="match_parent"
+        android:layout_below="@id/emailEditText"
+        android:layout_centerHorizontal="true"
+        android:hint="@string/password_edit_text_hint"
+        android:autofillHints="@string/password_edit_text_hint"
+        style="@style/PasswordEditText"
+        />
+
+    <Button
+        android:id="@+id/signUpButton"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="38dp"
+        style="@style/PrimaryButton"
+        tools:text="@string/sign_up_button_title"
+        />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/signUpButton"
+        android:layout_marginBottom="25dp"
+        android:gravity="center">
+        <RadioButton
+            android:id="@+id/acceptButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/termsAndConditionsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="0dp"
+            style="@style/TermsAndConditions"
+            android:text="@string/i_agree_to_the_terms_and_conditions"/>
+    </LinearLayout>
+</RelativeLayout>

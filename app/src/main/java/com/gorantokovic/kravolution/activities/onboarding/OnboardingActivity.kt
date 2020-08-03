@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.viewpager2.widget.ViewPager2
 import com.gorantokovic.kravolution.R
+import com.gorantokovic.kravolution.activities.auth.LoginActivity
 import com.gorantokovic.kravolution.settings.Settings
 
 class OnboardingActivity : AppCompatActivity() {
@@ -52,6 +53,7 @@ class OnboardingActivity : AppCompatActivity() {
                 sliderViewPager.setCurrentItem(sliderViewPager.currentItem + 1, true)
             } else {
                 Settings.updateOnboardingStatus(this,true)
+                showAuth()
             }
         }
 
@@ -62,8 +64,8 @@ class OnboardingActivity : AppCompatActivity() {
         dots = arrayListOf()
         val dotNumber = sliderViewPager.adapter?.itemCount ?: 0
         for (i in 0 until dotNumber) {
-            var imageView = ImageView(this)
-            var params = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
+            val imageView = ImageView(this)
+            val params = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT)
             params.setMargins(8,0,8,0)
             dotsLayout.addView(imageView, params)
             dots.add(imageView)
@@ -80,5 +82,9 @@ class OnboardingActivity : AppCompatActivity() {
                 imageView.setImageDrawable(getDrawable(R.drawable.shape_empty_dot))
             }
         }
+    }
+
+    private fun showAuth() {
+        LoginActivity.show(this)
     }
 }

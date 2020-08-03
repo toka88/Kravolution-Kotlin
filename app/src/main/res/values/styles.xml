@@ -4,12 +4,17 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorAccent">@color/lightTextColor</item>
         <item name="android:windowNoTitle">true</item>
         <item name="android:windowFullscreen">true</item>
+        <item name="android:windowAnimationStyle">@style/DefaultActivityAnimation</item>
     </style>
 
-    <!--    Pedding-->
+    <style name="BlurredBackgroundImage">
+        <item name="android:background">@drawable/blurred_background_image</item>
+    </style>
+
+    <!--    Padding     -->
     <style name="LargeSideMargins">
         <item name="android:layout_marginStart">@dimen/padding_larger</item>
         <item name="android:layout_marginEnd">@dimen/padding_larger</item>
@@ -25,6 +30,10 @@
         <item name="android:background">@drawable/button_secondary</item>
     </style>
 
+    <style name="UnderlinedButton" parent="SecondaryActionTextType">
+        <item name="android:background">@drawable/shape_bottom_line</item>
+    </style>
+
     <!--    EditText-->
     <style name="BaseEditText" parent="InputTextType">
         <item name="android:textColor">@color/lightTextColor</item>
@@ -33,17 +42,32 @@
         <item name="android:drawableTint">@color/lightTextColor</item>
         <item name="android:paddingBottom">15dp</item>
         <item name="android:paddingEnd">10dp</item>
+        <item name="android:layout_height">@dimen/editTextHeight</item>
     </style>
 
     <style name="NameEditText" parent="BaseEditText">
         <item name="android:drawableEnd">@drawable/icon_name</item>
+        <item name="android:inputType">textPersonName</item>
+        <item name="android:hint">@string/username_edit_text_hint</item>
     </style>
 
     <style name="PasswordEditText" parent="BaseEditText">
         <item name="android:drawableEnd">@drawable/icon_password</item>
+        <item name="android:inputType">textPassword</item>
+        <item name="android:hint">@string/password_edit_text_hint</item>
     </style>
 
     <style name="EmailEditText" parent="BaseEditText">
         <item name="android:drawableEnd">@drawable/icon_email</item>
+        <item name="android:inputType">textEmailAddress</item>
+        <item name="android:hint">@string/email_edit_text_hint</item>
+    </style>
+
+    <!--    Activity transitions    -->
+    <style name="DefaultActivityAnimation" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
+        <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
+        <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
     </style>
 </resources>
