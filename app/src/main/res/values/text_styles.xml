@@ -7,6 +7,20 @@
         <item name="android:textColor">@color/lightTextColor</item>
         <item name="textAllCaps">true</item>
     </style>
+
+    <style name="PrimaryMenyItem" parent="LightText">
+        <item name="fontFamily">@font/gigalypse</item>
+        <item name="android:textSize">@dimen/font_menu_item_size</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="SecondaryMenyItem" parent="LightText">
+        <item name="fontFamily">@font/cairo</item>
+        <item name="android:textSize">@dimen/font_size_extra_small</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textAlignment">center</item>
+    </style>
     
     <!--  EditText -->
     <style name="InputTextType">
@@ -36,5 +50,9 @@
     <style name="TermsAndConditions">
         <item name="fontFamily">@font/helvetica_neue_regular</item>
         <item name="android:textSize">@dimen/font_size_extra_small</item>
+    </style>
+
+    <style name="LightText">
+        <item name="android:textColor">@color/lightTextColor</item>
     </style>
 </resources>

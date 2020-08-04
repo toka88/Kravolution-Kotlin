@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.gorantokovic.kravolution.activities.auth.LoginActivity
+import com.gorantokovic.kravolution.activities.navigation.NavigationActivity
 import com.gorantokovic.kravolution.activities.onboarding.OnboardingActivity
 import com.gorantokovic.kravolution.persistance.PreferenceManager
 import com.gorantokovic.kravolution.settings.Settings
@@ -14,12 +15,13 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        NavigationActivity.show(this)
 
-        if (!Settings.hasOnboardingShowed(this)) {
-            showOnboarding()
-        } else {
-            showAuth()
-        }
+//        if (!Settings.hasOnboardingShowed(this)) {
+//            showOnboarding()
+//        } else {
+//            showAuth()
+//        }
     }
 
     private fun showOnboarding() {

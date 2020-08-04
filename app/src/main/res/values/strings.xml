@@ -10,4 +10,11 @@
     <string name="password_edit_text_hint">Password</string>
     <string name="sign_up_button_title">Sign up</string>
     <string name="i_agree_to_the_terms_and_conditions">I agree to the terms and conditions</string>
+    <string name="your_profile_menu_item">Your profile</string>
+    <string name="my_passport_menu_item">My passport</string>
+    <string name="your_seminars_menu_item">Your seminars</string>
+    <string name="how_to_menu_item">How to</string>
+    <string name="sign_out_menu_item">Sign out</string>
+    <string name="privacy_policy_menu_item">Privacy policy</string>
+    <string name="terms_of_service_menu_item">Terms of service</string>
 </resources>

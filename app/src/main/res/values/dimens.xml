@@ -3,6 +3,7 @@
     <dimen name="radius_default">22dp</dimen>
     <dimen name="line_width">1dp</dimen>
     <dimen name="button_height">55dp</dimen>
+    <dimen name="navigation_button_height">30dp</dimen>
     <dimen name="underlined_button_height">25dp</dimen>
     <dimen name="editTextHeight">50dp</dimen>
 
@@ -17,6 +18,7 @@
     <dimen name="font_size_normal">16dp</dimen>
     <dimen name="font_size_extra_normal">17dp</dimen>
     <dimen name="font_size_large">20dp</dimen>
+    <dimen name="font_menu_item_size">22dp</dimen>
     <dimen name="font_size_extra_large">28dp</dimen>
     <dimen name="font_size_big">36dp</dimen>
 </resources>
