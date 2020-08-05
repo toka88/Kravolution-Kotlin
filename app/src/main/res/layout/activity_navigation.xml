@@ -5,8 +5,6 @@
     android:id="@+id/drawer"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-<!--    tools:openDrawer="start">-->
-
 
     <FrameLayout
         android:id="@+id/contentFrameLayout"
@@ -14,36 +12,22 @@
         android:layout_height="match_parent">
 
     </FrameLayout>
-<!--    <LinearLayout-->
-<!--        android:layout_width="match_parent"-->
-<!--        android:layout_height="match_parent">-->
-<!--        <TextView-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_marginTop="250dp"-->
-<!--            android:textAlignment="center"-->
-<!--            android:text="Content View"-->
-<!--            android:background="#88aacc"-->
-<!--            style="@style/TitleTextType"/>-->
-
-<!--    </LinearLayout>-->
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
-        android:fitsSystemWindows="true"
         android:layout_marginEnd="-65dp"
         android:layout_marginRight="-65dp"
-        >
+        android:fitsSystemWindows="true">
 
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".activities.navigation.NavigationActivity"
-            android:gravity="start"
+            android:alpha="0.5"
             android:background="@color/colorAccent"
-            android:alpha="0.5">
+            android:gravity="start"
+            tools:context=".activities.navigation.NavigationActivity">
 
             <Button
                 android:id="@+id/closeButton"
@@ -54,8 +38,7 @@
                 android:layout_marginStart="@dimen/padding_small"
                 android:layout_marginTop="@dimen/padding_small"
                 android:background="@drawable/close_background"
-                android:padding="10dp"
-                />
+                android:padding="10dp" />
 
             <Button
                 android:id="@+id/termsOfServiceButton"
@@ -66,8 +49,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginBottom="@dimen/padding_small"
                 android:background="@null"
-                android:text="@string/terms_of_service_menu_item"
-                />
+                android:text="@string/terms_of_service_menu_item" />
 
             <Button
                 android:id="@+id/privacyPolicyButton"
@@ -77,8 +59,7 @@
                 android:layout_above="@id/termsOfServiceButton"
                 android:layout_centerHorizontal="true"
                 android:background="@null"
-                android:text="@string/privacy_policy_menu_item"
-                />
+                android:text="@string/privacy_policy_menu_item" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/menuRecyclerView"
@@ -88,8 +69,7 @@
                 android:layout_below="@id/closeButton"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentEnd="true"
-                android:layout_marginTop="80dp"
-                />
+                android:layout_marginTop="80dp" />
 
         </RelativeLayout>
 
