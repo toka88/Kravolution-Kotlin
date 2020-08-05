@@ -7,7 +7,7 @@ object Loader {
 
     fun show(context: Context) {
         dialog?.isShowing?.let {
-            remove()
+            return
         }
 
         dialog = LoaderDialog(context)
@@ -15,6 +15,11 @@ object Loader {
     }
 
     fun remove() {
+        dialog?.dismiss()
+        dialog = null
+    }
 
+    fun isShowing(): Boolean {
+        return dialog?.isShowing ?: false
     }
 }

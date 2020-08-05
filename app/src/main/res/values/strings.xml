@@ -2,6 +2,15 @@
     <string name="app_name">Kravolution</string>
     <string name="classes">CLASSES</string>
     <string name="first_onboarding_description">Praesent nec porta arcu.\n Duis quis purus nibh</string>
+
+    <!--    Screen titles   -->
+    <string name="forgot_password_screen_title">Forgot password</string>
+    <string name="reset_password_screen_title">Reset password</string>
+
+    <!--    Buttons     -->
+    <string name="submit_new_password_button_title">Submit</string>
+
+    <!--    Edit text   -->
     <string name="reset_password_button_title">Reset password</string>
     <string name="sign_in_button_title">Sign in</string>
     <string name="create_account_button_title">Create account</string>
@@ -10,4 +19,12 @@
     <string name="password_edit_text_hint">Password</string>
     <string name="sign_up_button_title">Sign up</string>
     <string name="i_agree_to_the_terms_and_conditions">I agree to the terms and conditions</string>
+    <string name="did_you_forget_your_password">Did you forget your password?</string>
+    <string name="reset_password">Reset password</string>
+    <string name="reset_code_hint">Reset code</string>
+    <string name="new_password_hint">New password</string>
+    <string name="confirm_new_password_hint">Confirm new password</string>
+
+    <!--    Info text   -->
+    <string name="check_your_email_and_the_paste_the_reset_code_in_the_field_below">Check your email and the paste the reset code in the field below</string>
 </resources>

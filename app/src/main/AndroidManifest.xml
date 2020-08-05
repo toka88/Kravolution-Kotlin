@@ -12,7 +12,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".activities.auth.BaseAuthActivity"/>
+
+        <activity android:name=".activities.auth.ResetPasswordActivity"></activity>
+        <activity android:name=".activities.auth.ForgotPasswordActivity" />
+        <activity android:name=".activities.auth.BaseAuthActivity" />
         <activity android:name=".activities.auth.RegisterActivity" />
         <activity android:name=".activities.auth.LoginActivity" />
         <activity android:name=".activities.onboarding.OnboardingActivity" />

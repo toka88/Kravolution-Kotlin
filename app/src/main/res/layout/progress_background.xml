@@ -3,12 +3,14 @@
     android:id="@+id/loadingPanel"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center">
+    android:gravity="center"
+    android:background="#00000000">
 
     <ProgressBar
         style="?android:attr/progressBarStyleLarge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:indeterminate="true"
-        android:indeterminateDrawable="@drawable/custom_progress_dialog" />
+        android:indeterminateDrawable="@drawable/custom_progress_dialog"
+        android:background="#00000000"/>
 </RelativeLayout>
