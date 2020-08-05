@@ -1,8 +1,6 @@
 package com.gorantokovic.kravolution.networking.interfaces
 
-import com.gorantokovic.kravolution.models.AuthRequest
-import com.gorantokovic.kravolution.models.AuthResponse
-import com.gorantokovic.kravolution.models.RefreshTokenRequest
+import com.gorantokovic.kravolution.models.*
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST
@@ -16,4 +14,10 @@ interface AuthInterface {
 
     @POST("api/auth/login/refresh")
     fun refreshToken(@Body body: RefreshTokenRequest): Call<AuthResponse>
+  
+    @POST("api/auth/forgotPassword")
+    fun requestResetPasswordCode(@Body body: ForgotPasswordRequest): Call<InfoResponse>
+
+    @POST("api/auth/resetPassword")
+    fun resetPassword(@Body body: ResetPasswordRequest): Call<InfoResponse>
 }

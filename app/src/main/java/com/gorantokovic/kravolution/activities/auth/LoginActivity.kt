@@ -59,7 +59,7 @@ class LoginActivity : BaseAuthActivity() {
 
         // Reset password button
         resetPasswordButton.setOnClickListener {
-            Toast.makeText(this, "Reset password", Toast.LENGTH_SHORT).show()
+            ForgotPasswordActivity.show(this)
         }
     }
 

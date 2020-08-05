@@ -63,6 +63,11 @@
         <item name="android:hint">@string/email_edit_text_hint</item>
     </style>
 
+    <style name="ResetCodeEditText" parent="BaseEditText">
+        <item name="android:inputType">numberPassword</item>
+        <item name="android:hint">@string/reset_code_hint</item>
+    </style>
+
     <!--    Activity transitions    -->
     <style name="DefaultActivityAnimation" parent="@android:style/Animation.Activity">
         <item name="android:activityOpenEnterAnimation">@anim/slide_in_right</item>
