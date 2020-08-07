@@ -6,19 +6,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <FrameLayout
-        android:id="@+id/contentFrameLayout"
+    <RelativeLayout
+        android:id="@+id/contentRelativeLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-    </FrameLayout>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottonNavigationView"
+            style="@style/BottomNavigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:showAsAction="ifRoom"/>
+
+        <FrameLayout
+            android:id="@+id/containerFrameLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottonNavigationView"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true">
+
+        </FrameLayout>
+    </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:layout_marginEnd="-65dp"
-        android:layout_marginRight="-65dp"
         android:fitsSystemWindows="true">
 
         <RelativeLayout
@@ -27,7 +46,7 @@
             android:alpha="0.5"
             android:background="@color/colorAccent"
             android:gravity="start"
-            tools:context=".activities.navigation.NavigationActivity">
+            tools:context=".activities.navigation.BaseNavigationActivity">
 
             <Button
                 android:id="@+id/closeButton"

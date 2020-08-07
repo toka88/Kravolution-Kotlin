@@ -45,12 +45,12 @@ class InfiniteApi {
         }
 
         fun register(
-            username: String,
+            name: String,
             email: String,
             password: String,
             callback: (Result<AuthResponse>) -> Unit
         ): Call<AuthResponse> {
-            val body = AuthRequest(email, password)
+            val body = AuthRequest(email, password, name)
             val call = buildService(AuthInterface::class.java).register(body)
             call.enqueue {
                 when (it) {

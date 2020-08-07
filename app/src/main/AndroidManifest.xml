@@ -12,8 +12,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-
-        <activity android:name=".activities.navigation.NavigationActivity" />
+        <activity android:name=".activities.BaseBottomNavigationActivity"></activity>
+        <activity android:name=".activities.dojo.DojoActivity" />
+        <activity android:name=".activities.mybelt.MyBeltActivity" />
+        <activity android:name=".activities.scheduler.SchedulerActivity" />
+        <activity android:name=".activities.shop.ShopActivity" />
+        <activity android:name=".activities.home.HomeActivity" />
+        <activity android:name=".activities.navigation.BaseNavigationActivity" />
         <activity android:name=".activities.auth.ResetPasswordActivity" />
         <activity android:name=".activities.auth.ForgotPasswordActivity" />
         <activity android:name=".activities.auth.BaseAuthActivity" />
@@ -23,6 +28,7 @@
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

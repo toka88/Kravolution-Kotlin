@@ -4,10 +4,8 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.gorantokovic.kravolution.activities.auth.LoginActivity
-import com.gorantokovic.kravolution.activities.navigation.NavigationActivity
+import com.gorantokovic.kravolution.activities.home.HomeActivity
 import com.gorantokovic.kravolution.activities.onboarding.OnboardingActivity
-import com.gorantokovic.kravolution.persistance.PreferenceManager
-import com.gorantokovic.kravolution.settings.Settings
 import java.util.*
 import kotlin.concurrent.schedule
 
@@ -15,7 +13,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        NavigationActivity.show(this)
+        HomeActivity.show(this)
 
 //        if (!Settings.hasOnboardingShowed(this)) {
 //            showOnboarding()

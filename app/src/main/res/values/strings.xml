@@ -27,6 +27,7 @@
 
     <!--    Info text   -->
     <string name="check_your_email_and_the_paste_the_reset_code_in_the_field_below">Check your email and the paste the reset code in the field below</string>
+    <string name="tap_in_to_assign_your_doJo">Tap in to assign your DoJo</string>
 
     <!--    Menu items-->
     <string name="your_profile_menu_item">Your profile</string>
@@ -36,4 +37,5 @@
     <string name="sign_out_menu_item">Sign out</string>
     <string name="privacy_policy_menu_item">Privacy policy</string>
     <string name="terms_of_service_menu_item">Terms of service</string>
+    <string name="open_menu_content_description">Open menu</string>
 </resources>
