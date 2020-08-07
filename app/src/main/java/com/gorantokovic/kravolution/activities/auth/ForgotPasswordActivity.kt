@@ -3,15 +3,12 @@ package com.gorantokovic.kravolution.activities.auth
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import com.gorantokovic.kravolution.R
 import com.gorantokovic.kravolution.extensions.afterTextChanged
 import com.gorantokovic.kravolution.networking.InfiniteApi
 import com.gorantokovic.kravolution.networking.Result
 import com.gorantokovic.kravolution.views.Loader
 import kotlinx.android.synthetic.main.activity_forgot_password.*
-import kotlinx.android.synthetic.main.activity_forgot_password.emailEditText
-import kotlinx.android.synthetic.main.activity_forgot_password.resetPasswordButton
 
 class ForgotPasswordActivity : BaseAuthActivity() {
     companion object {

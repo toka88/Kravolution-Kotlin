@@ -16,5 +16,5 @@
         android:paddingStart="@dimen/padding_small"
         android:paddingEnd="@dimen/padding_small"
         android:textAlignment="center"
-        style="@style/PrimaryMenyItem"/>
+        style="@style/PrimaryMenuItem"/>
 </RelativeLayout>

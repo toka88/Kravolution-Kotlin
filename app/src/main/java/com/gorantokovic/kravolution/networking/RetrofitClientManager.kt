@@ -15,7 +15,7 @@ class RetrofitClientManager {
                 .readTimeout(60, TimeUnit.SECONDS)
                 .connectTimeout(60, TimeUnit.SECONDS)
                 .addInterceptor(HttpInterceptor())
-                .authenticator(TokenAuthentificator())
+                .authenticator(TokenAuthenticator())
                 .build()
 
             return Retrofit.Builder()

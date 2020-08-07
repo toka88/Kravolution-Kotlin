@@ -12,7 +12,7 @@
         android:layout_height="match_parent">
 
         <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottonNavigationView"
+            android:id="@+id/bottomNavigationView"
             style="@style/BottomNavigation"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
             android:id="@+id/containerFrameLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/bottonNavigationView"
+            android:layout_above="@+id/bottomNavigationView"
             android:layout_alignParentStart="true"
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true">
@@ -61,7 +61,7 @@
 
             <Button
                 android:id="@+id/termsOfServiceButton"
-                style="@style/SecondaryMenyItem"
+                style="@style/SecondaryMenuItem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
@@ -72,7 +72,7 @@
 
             <Button
                 android:id="@+id/privacyPolicyButton"
-                style="@style/SecondaryMenyItem"
+                style="@style/SecondaryMenuItem"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_above="@id/termsOfServiceButton"

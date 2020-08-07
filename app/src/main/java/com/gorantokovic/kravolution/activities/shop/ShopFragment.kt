@@ -9,8 +9,6 @@ import android.widget.ImageButton
 import com.gorantokovic.kravolution.R
 import com.gorantokovic.kravolution.activities.navigation.BaseNavigationFragment
 import com.gorantokovic.kravolution.activities.navigation.NavigationActivity
-import kotlinx.android.synthetic.main.activity_shop.*
-import kotlinx.android.synthetic.main.header.*
 
 class ShopFragment : BaseNavigationFragment() {
 

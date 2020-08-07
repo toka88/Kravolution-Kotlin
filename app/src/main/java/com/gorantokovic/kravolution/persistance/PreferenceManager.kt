@@ -37,10 +37,10 @@ class PreferenceManager {
 
         var user: User?
             get() {
-                return PreferenceManager.get("user")
+                return get("user")
             }
             set(value) {
-                PreferenceManager.put(value, "user")
+                put(value, "user")
             }
 
         fun clearUsersData() {

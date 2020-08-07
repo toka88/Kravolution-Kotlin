@@ -5,12 +5,11 @@ import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.ProgressBar
-import android.widget.Toast
 import com.gorantokovic.kravolution.R
 import com.gorantokovic.kravolution.extensions.afterTextChanged
 import com.gorantokovic.kravolution.networking.InfiniteApi
-import kotlinx.android.synthetic.main.activity_login.*
 import com.gorantokovic.kravolution.networking.Result
+import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : BaseAuthActivity() {
 

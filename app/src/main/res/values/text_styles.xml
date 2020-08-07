@@ -9,14 +9,14 @@
         <item name="android:textAlignment">center</item>
     </style>
 
-    <style name="PrimaryMenyItem" parent="LightText">
+    <style name="PrimaryMenuItem" parent="LightText">
         <item name="fontFamily">@font/gigalypse</item>
         <item name="android:textSize">@dimen/font_menu_item_size</item>
         <item name="textAllCaps">true</item>
         <item name="android:textAlignment">center</item>
     </style>
 
-    <style name="SecondaryMenyItem" parent="LightText">
+    <style name="SecondaryMenuItem" parent="LightText">
         <item name="fontFamily">@font/cairo</item>
         <item name="android:textSize">@dimen/font_size_extra_small</item>
         <item name="textAllCaps">true</item>

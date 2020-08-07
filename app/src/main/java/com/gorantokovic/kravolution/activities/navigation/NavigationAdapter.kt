@@ -10,16 +10,16 @@ import com.gorantokovic.kravolution.R
 
 class NavigationAdapter(
     private val context: Context,
-    private val onClickListener: (View, MenyItemType) -> Unit
+    private val onClickListener: (View, MenuItemType) -> Unit
 ) :
     RecyclerView.Adapter<NavigationAdapter.PrimaryViewHolder>() {
 
-    private val menyItems: Array<MenyItemType> = arrayOf(
-        MenyItemType.YourProfile,
-        MenyItemType.MyPassport,
-        MenyItemType.YourSeminars,
-        MenyItemType.HowTo,
-        MenyItemType.SignOut
+    private val menuItems: Array<MenuItemType> = arrayOf(
+        MenuItemType.YourProfile,
+        MenuItemType.MyPassport,
+        MenuItemType.YourSeminars,
+        MenuItemType.HowTo,
+        MenuItemType.SignOut
     )
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PrimaryViewHolder {
@@ -29,22 +29,22 @@ class NavigationAdapter(
     }
 
     override fun getItemCount(): Int {
-        return menyItems.count()
+        return menuItems.count()
     }
 
     override fun getItemViewType(position: Int): Int {
-        return menyItems[position].ordinal
+        return menuItems[position].ordinal
     }
 
     override fun onBindViewHolder(holder: PrimaryViewHolder, position: Int) {
-        val itemType = menyItems[position]
+        val itemType = menuItems[position]
         holder.update(itemType.title(context))
         holder.itemView.setOnClickListener {
             onClickListener(it, itemType)
         }
     }
 
-    enum class MenyItemType {
+    enum class MenuItemType {
         YourProfile, MyPassport, YourSeminars, HowTo, SignOut;
 
         fun title(context: Context): String {

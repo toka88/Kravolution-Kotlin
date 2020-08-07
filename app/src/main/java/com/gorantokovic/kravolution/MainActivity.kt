@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.gorantokovic.kravolution.activities.auth.LoginActivity
-import com.gorantokovic.kravolution.activities.home.HomeFragment
 import com.gorantokovic.kravolution.activities.navigation.NavigationActivity
 import com.gorantokovic.kravolution.activities.onboarding.OnboardingActivity
 import java.util.*

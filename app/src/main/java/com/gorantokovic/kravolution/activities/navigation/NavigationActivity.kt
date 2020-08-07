@@ -45,9 +45,9 @@ class NavigationActivity : BaseActivity() {
         }
 
         // Menu recycler view
-        menuRecyclerView.adapter = NavigationAdapter(this, { view, itemType ->
+        menuRecyclerView.adapter = NavigationAdapter(this) { view, itemType ->
             handleMenuItemClick(itemType)
-        })
+        }
         menuRecyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
 
         // Bottom navigation
@@ -58,24 +58,24 @@ class NavigationActivity : BaseActivity() {
 
         activeFragment = getHomeFragment()
         showFragment(getHomeFragment())
-        bottonNavigationView.selectedItemId = R.id.home
-        bottonNavigationView.setOnNavigationItemSelectedListener {
+        bottomNavigationView.selectedItemId = R.id.home
+        bottomNavigationView.setOnNavigationItemSelectedListener {
             return@setOnNavigationItemSelectedListener handleBottomNavigationItemClick(it)
         }
     }
 
-    private fun handleMenuItemClick(itemType: NavigationAdapter.MenyItemType) {
+    private fun handleMenuItemClick(itemType: NavigationAdapter.MenuItemType) {
         showToast("Clicked on $itemType")
     }
 
     // Drawer
 
     internal fun openDrawer() {
-        drawer.openDrawer(GravityCompat.START);
+        drawer.openDrawer(GravityCompat.START)
     }
 
     internal fun closeDrawer() {
-        drawer.closeDrawer(GravityCompat.START);
+        drawer.closeDrawer(GravityCompat.START)
     }
 
     // Bottom navigation
