@@ -22,7 +22,7 @@
         <item name="textAllCaps">true</item>
         <item name="android:textAlignment">center</item>
     </style>
-    
+
     <!--  EditText -->
     <style name="InputTextType">
         <item name="fontFamily">@font/helvetica_neu</item>
@@ -56,5 +56,22 @@
 
     <style name="LightText">
         <item name="android:textColor">@color/lightTextColor</item>
+    </style>
+
+    <!--    Calendar    -->
+    <style name="DayInWeekText">
+        <item name="fontFamily">@font/gigalypse</item>
+        <item name="android:textSize">@dimen/font_size_extra_small</item>
+        <item name="android:textColor">@color/darkTextColor</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="DayInMonthText">
+        <item name="fontFamily">@font/gigalypse</item>
+        <item name="android:textSize">@dimen/font_size_normal</item>
+        <item name="android:textColor">@color/darkTextColor</item>
+        <item name="textAllCaps">true</item>
+        <item name="android:textAlignment">center</item>
     </style>
 </resources>

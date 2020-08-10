@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="radius_default">22dp</dimen>
+    <dimen name="calendar_radius">5dp</dimen>
     <dimen name="line_width">1dp</dimen>
     <dimen name="button_height">55dp</dimen>
     <dimen name="navigation_button_height">30dp</dimen>
