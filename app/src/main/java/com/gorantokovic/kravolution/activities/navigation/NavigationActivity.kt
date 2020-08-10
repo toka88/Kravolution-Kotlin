@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.gorantokovic.kravolution.R
 import com.gorantokovic.kravolution.activities.BaseActivity
 import com.gorantokovic.kravolution.activities.home.HomeFragment
+import com.gorantokovic.kravolution.activities.scheduler.SchedulerFragment
 import com.gorantokovic.kravolution.activities.shop.ShopFragment
 import kotlinx.android.synthetic.main.activity_navigation.*
 
@@ -27,6 +28,7 @@ class NavigationActivity : BaseActivity() {
 
     private lateinit var mHomeFragment: HomeFragment
     private lateinit var mShopFragment: ShopFragment
+    private lateinit var mSchedulerFragment: SchedulerFragment
     private lateinit var activeFragment: Fragment
     private val fragmentManager = supportFragmentManager
 
@@ -54,6 +56,7 @@ class NavigationActivity : BaseActivity() {
         fragmentManager.beginTransaction().apply {
             add(R.id.containerFrameLayout, getHomeFragment())
             add(R.id.containerFrameLayout, getShopFragment()).hide(getShopFragment())
+            add(R.id.containerFrameLayout, getSchedulerFragment()).hide(getSchedulerFragment())
         }.commit()
 
         activeFragment = getHomeFragment()
@@ -102,6 +105,9 @@ class NavigationActivity : BaseActivity() {
             R.id.shop -> {
                 showFragment(getShopFragment())
             }
+            R.id.scheduler -> {
+                showFragment(getSchedulerFragment())
+            }
         }
         return true
     }
@@ -122,5 +128,13 @@ class NavigationActivity : BaseActivity() {
             Log.i("NavigationActivity", "ShopFragment initialized")
         }
         return mShopFragment
+    }
+
+    private fun getSchedulerFragment(): SchedulerFragment {
+        if (!this::mSchedulerFragment.isInitialized) {
+            mSchedulerFragment = SchedulerFragment()
+            Log.i("NavigationActivity", "SchedulerFragment initialized")
+        }
+        return mSchedulerFragment
     }
 }

@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebView
 import android.widget.ImageButton
+import android.widget.TextView
 import com.gorantokovic.kravolution.R
 import com.gorantokovic.kravolution.activities.navigation.BaseNavigationFragment
 import com.gorantokovic.kravolution.activities.navigation.NavigationActivity
@@ -20,7 +21,7 @@ class ShopFragment : BaseNavigationFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val view  = inflater.inflate(R.layout.activity_shop, container, false)
+        val view  = inflater.inflate(R.layout.fragment_shop, container, false)
         configureViews(view)
         return view
     }
@@ -30,6 +31,10 @@ class ShopFragment : BaseNavigationFragment() {
     }
 
     private fun configureViews(view: View) {
+        // Header
+        val titleTextView: TextView = view.findViewById(R.id.titleTextView)
+        titleTextView.text = getString(R.string.shop_for_kit_screen_title)
+
         // Web view
         shopWebView = view.findViewById(R.id.shopWebView)
         shopWebView.loadUrl("https://www.google.rs")
@@ -37,7 +42,7 @@ class ShopFragment : BaseNavigationFragment() {
         // Menu button
         menuButton = view.findViewById(R.id.menuButton)
         menuButton.setOnClickListener {
-            (activity as? NavigationActivity)?.openDrawer()
+            openDrawer()
         }
     }
 }

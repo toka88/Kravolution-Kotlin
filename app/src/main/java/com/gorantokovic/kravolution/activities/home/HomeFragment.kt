@@ -26,7 +26,7 @@ class HomeFragment : BaseNavigationFragment() {
         savedInstanceState: Bundle?
     ): View? {
         Log.i("HomeFragment", "onCreateView")
-        val view = inflater.inflate(R.layout.activity_home, container, false)
+        val view = inflater.inflate(R.layout.fragment_home, container, false)
         registerListeners(view)
         return view
     }
@@ -39,7 +39,7 @@ class HomeFragment : BaseNavigationFragment() {
     private fun registerListeners(view: View) {
         menuButton = view.findViewById(R.id.menuButton)
         menuButton.setOnClickListener {
-            (activity as? NavigationActivity)?.openDrawer()
+            openDrawer()
         }
     }
 }

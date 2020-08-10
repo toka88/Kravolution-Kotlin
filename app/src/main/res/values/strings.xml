@@ -6,6 +6,8 @@
     <!--    Screen titles   -->
     <string name="forgot_password_screen_title">Forgot password</string>
     <string name="reset_password_screen_title">Reset password</string>
+    <string name="shop_for_kit_screen_title">Shop for kit</string>
+    <string name="scheduler_screen_title">Scheduler</string>
 
     <!--    Buttons     -->
     <string name="submit_new_password_button_title">Submit</string>

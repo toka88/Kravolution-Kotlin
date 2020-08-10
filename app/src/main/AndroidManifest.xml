@@ -14,7 +14,6 @@
         android:theme="@style/AppTheme">
         <activity android:name=".activities.dojo.DojoActivity" />
         <activity android:name=".activities.mybelt.MyBeltActivity" />
-        <activity android:name=".activities.scheduler.SchedulerActivity" />
         <activity android:name=".activities.navigation.NavigationActivity" />
         <activity android:name=".activities.auth.ResetPasswordActivity" />
         <activity android:name=".activities.auth.ForgotPasswordActivity" />
