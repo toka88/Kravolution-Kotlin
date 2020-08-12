@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorPrimaryLight"
+    android:paddingStart="@dimen/padding_scheduler"
+    android:paddingTop="5dp"
+    android:paddingEnd="@dimen/padding_scheduler"
+    android:paddingBottom="5dp">
+
+    <LinearLayout
+        android:id="@+id/timeContainerLinearLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/startAtTextView"
+            style="@style/EventStartsAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            tools:text="10:20" />
+
+        <TextView
+            android:id="@+id/endAtTextView"
+            style="@style/EventEndsAt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_smaller"
+            tools:text="11:45" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/verticalIndicatorView"
+        android:layout_width="2dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/padding_scheduler"
+        android:layout_toEndOf="@+id/timeContainerLinearLayout"
+        android:background="@color/colorAccent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/padding_small"
+        android:layout_toEndOf="@+id/verticalIndicatorView"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/eventTitleTextView"
+            style="@style/EventStartsAt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            tools:text="Begginers (group 1)" />
+
+        <TextView
+            android:id="@+id/eventStatusTextView"
+            style="@style/EventEndsAt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/padding_smaller"
+            tools:text="Canceled" />
+    </LinearLayout>
+</RelativeLayout>

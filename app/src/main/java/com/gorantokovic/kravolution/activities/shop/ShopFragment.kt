@@ -9,7 +9,6 @@ import android.widget.ImageButton
 import android.widget.TextView
 import com.gorantokovic.kravolution.R
 import com.gorantokovic.kravolution.activities.navigation.BaseNavigationFragment
-import com.gorantokovic.kravolution.activities.navigation.NavigationActivity
 
 class ShopFragment : BaseNavigationFragment() {
 

@@ -9,11 +9,13 @@ import androidx.core.view.GravityCompat
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.gorantokovic.kravolution.MainActivity
 import com.gorantokovic.kravolution.R
 import com.gorantokovic.kravolution.activities.BaseActivity
 import com.gorantokovic.kravolution.activities.home.HomeFragment
 import com.gorantokovic.kravolution.activities.scheduler.SchedulerFragment
 import com.gorantokovic.kravolution.activities.shop.ShopFragment
+import com.gorantokovic.kravolution.persistance.PreferenceManager
 import kotlinx.android.synthetic.main.activity_navigation.*
 
 class NavigationActivity : BaseActivity() {
@@ -68,6 +70,12 @@ class NavigationActivity : BaseActivity() {
     }
 
     private fun handleMenuItemClick(itemType: NavigationAdapter.MenuItemType) {
+        when (itemType) {
+            NavigationAdapter.MenuItemType.SignOut -> {
+                PreferenceManager.clearUsersData()
+                MainActivity.show(this)
+            }
+        }
         showToast("Clicked on $itemType")
     }
 

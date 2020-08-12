@@ -24,7 +24,7 @@ class NavigationAdapter(
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PrimaryViewHolder {
         val view = LayoutInflater.from(parent.context)
-            .inflate(R.layout.raw_menu_primary, parent, false)
+            .inflate(R.layout.row_menu_primary, parent, false)
         return PrimaryViewHolder(view)
     }
 

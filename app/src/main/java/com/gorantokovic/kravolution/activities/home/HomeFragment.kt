@@ -8,7 +8,6 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import com.gorantokovic.kravolution.R
 import com.gorantokovic.kravolution.activities.navigation.BaseNavigationFragment
-import com.gorantokovic.kravolution.activities.navigation.NavigationActivity
 
 class HomeFragment : BaseNavigationFragment() {
 

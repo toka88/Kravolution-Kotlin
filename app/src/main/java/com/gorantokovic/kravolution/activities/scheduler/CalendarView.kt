@@ -7,7 +7,6 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
-import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gorantokovic.kravolution.R
 import com.gorantokovic.kravolution.helpers.DateFormatter
@@ -44,12 +43,11 @@ class CalendarView(context: Context, attrs: AttributeSet?) : LinearLayout(contex
     }
 }
 
-private class CalendarAdapter() : RecyclerView.Adapter<CalendarAdapter.CalendarItemHolder>() {
+private class CalendarAdapter : RecyclerView.Adapter<CalendarAdapter.CalendarItemHolder>() {
 
     private var visibleDates: ArrayList<Date> = ArrayList()
 
     var startDate: Date = Date()
-        get() = field
         set(value) {
             field = value
             reloadData()
@@ -106,8 +104,8 @@ private class CalendarAdapter() : RecyclerView.Adapter<CalendarAdapter.CalendarI
         var dates: ArrayList<Date> = ArrayList()
 
         while (!startCalendar.after(endCalendar)) {
-            dates.add(startCalendar.getTime());
-            startCalendar.add(Calendar.DATE, 1);
+            dates.add(startCalendar.getTime())
+            startCalendar.add(Calendar.DATE, 1)
         }
 
         visibleDates = dates

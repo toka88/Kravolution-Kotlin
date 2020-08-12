@@ -2,6 +2,7 @@ package com.gorantokovic.kravolution.networking
 
 import com.gorantokovic.kravolution.models.*
 import com.gorantokovic.kravolution.networking.interfaces.AuthInterface
+import com.gorantokovic.kravolution.networking.interfaces.SchedulerInterface
 import com.gorantokovic.kravolution.networking.interfaces.UserInterface
 import com.gorantokovic.kravolution.persistance.PreferenceManager
 import retrofit2.Call
@@ -55,14 +56,14 @@ class InfiniteApi {
             call.enqueue {
                 when (it) {
                     is Result.Success -> {
-                        val body = it.response.body()
-                        body?.accessToken?.let {
+                        val authResponse = it.response.body()
+                        authResponse?.accessToken?.let {
                             PreferenceManager.accessToken = it
                         }
-                        body?.refreshToken?.let {
+                        authResponse?.refreshToken?.let {
                             PreferenceManager.refreshToken = it
                         }
-                        body?.user?.let {
+                        authResponse?.user?.let {
                             PreferenceManager.user = it
                         }
                     }
@@ -110,6 +111,16 @@ class InfiniteApi {
 
         fun getProfile(callback: (Result<User>) -> Unit): Call<User> {
             val call = buildService(UserInterface::class.java).getProfile()
+            call.enqueue {
+                return@enqueue callback(it)
+            }
+            return call
+        }
+
+        // Scheduler
+
+        fun fetchScheduler(from: String, to: String, callback: (Result<List<Event>>) -> Unit): Call<List<Event>> {
+            val call = buildService(SchedulerInterface::class.java).getScheduler(from, to)
             call.enqueue {
                 return@enqueue callback(it)
             }

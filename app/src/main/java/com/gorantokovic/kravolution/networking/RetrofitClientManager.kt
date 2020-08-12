@@ -20,7 +20,7 @@ class RetrofitClientManager {
 
             return Retrofit.Builder()
                 .client(okHttpClient)
-                .baseUrl(DEVELOPMENT_URL)
+                .baseUrl(PRODUCTION_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(okHttpClient)
                 .build()
