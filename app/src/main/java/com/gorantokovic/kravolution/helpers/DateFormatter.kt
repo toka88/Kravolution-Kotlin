@@ -30,7 +30,6 @@ class DateFormatter {
             dateFormat.timeZone = TimeZone.getDefault()
             val date = Date(timestamp * 1000)
             return dateFormat.format(date)
-                .first()
                 .toString()
         }
     }
