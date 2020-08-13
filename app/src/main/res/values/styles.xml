@@ -34,6 +34,12 @@
         <item name="android:background">@drawable/shape_bottom_line</item>
     </style>
 
+    <style name="MenuButton">
+        <item name="backgroundTint">#00000000</item>
+        <item name="tint">@color/colorPrimaryLight</item>
+        <item name="android:src">@drawable/icon_menu</item>
+    </style>
+
     <!--    EditText-->
     <style name="BaseEditText" parent="InputTextType">
         <item name="android:textColor">@color/lightTextColor</item>
@@ -74,5 +80,13 @@
         <item name="android:activityOpenExitAnimation">@anim/slide_out_left</item>
         <item name="android:activityCloseEnterAnimation">@anim/slide_in_left</item>
         <item name="android:activityCloseExitAnimation">@anim/slide_out_right</item>
+    </style>
+
+    <!--    Bottom navigation view  -->
+    <style name="BottomNavigation">
+        <item name="android:background">@color/colorPrimaryDarkTransparent</item>
+        <item name="itemTextColor">@drawable/selector_bar_item</item>
+        <item name="itemIconTint">@drawable/selector_bar_item</item>
+        <item name="menu">@menu/bottom_navigation_menu</item>
     </style>
 </resources>

@@ -1,13 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <dimen name="radius_default">22dp</dimen>
+    <dimen name="calendar_radius">5dp</dimen>
     <dimen name="line_width">1dp</dimen>
     <dimen name="button_height">55dp</dimen>
+    <dimen name="navigation_button_height">30dp</dimen>
     <dimen name="underlined_button_height">25dp</dimen>
     <dimen name="editTextHeight">50dp</dimen>
 
     <!--    Padding     -->
+    <dimen name="padding_the_smallest">10dp</dimen>
+    <dimen name="padding_smaller">10dp</dimen>
     <dimen name="padding_small">20dp</dimen>
+    <dimen name="padding_scheduler">25dp</dimen>
     <dimen name="padding_larger">40dp</dimen>
     <dimen name="title_top_padding">55dp</dimen>
 
@@ -17,6 +22,7 @@
     <dimen name="font_size_normal">16dp</dimen>
     <dimen name="font_size_extra_normal">17dp</dimen>
     <dimen name="font_size_large">20dp</dimen>
+    <dimen name="font_menu_item_size">22dp</dimen>
     <dimen name="font_size_extra_large">28dp</dimen>
     <dimen name="font_size_big">36dp</dimen>
 </resources>

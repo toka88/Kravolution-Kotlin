@@ -4,9 +4,11 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import com.gorantokovic.kravolution.R
+import com.gorantokovic.kravolution.activities.navigation.NavigationActivity
 import com.gorantokovic.kravolution.extensions.afterTextChanged
 import com.gorantokovic.kravolution.networking.InfiniteApi
 import com.gorantokovic.kravolution.networking.Result
+import com.gorantokovic.kravolution.views.Loader
 import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : BaseAuthActivity() {
@@ -54,7 +56,7 @@ class RegisterActivity : BaseAuthActivity() {
             updateSignUpButtonStatus()
         }
 
-        // Sign uo button
+        // Sign up button
         signUpButton.text = getString(R.string.sign_up_button_title)
         signUpButton.setOnClickListener {
             showToast("Register Button tapped")
@@ -72,10 +74,12 @@ class RegisterActivity : BaseAuthActivity() {
         val email = emailEditText.text.toString()
         val password = passwordEditText.text.toString()
 
+        Loader.show(this)
         InfiniteApi.register(username, email, password) {
+            Loader.remove()
             when (it) {
                 is Result.Success -> {
-                    // TODO: show home
+                    NavigationActivity.show(this)
                 }
                 is Result.Failure -> {
                     showToast(it.error.message)

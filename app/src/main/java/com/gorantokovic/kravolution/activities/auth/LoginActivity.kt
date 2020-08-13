@@ -3,14 +3,14 @@ package com.gorantokovic.kravolution.activities.auth
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.ProgressBar
-import android.widget.Toast
 import com.gorantokovic.kravolution.R
+import com.gorantokovic.kravolution.activities.navigation.NavigationActivity
 import com.gorantokovic.kravolution.extensions.afterTextChanged
 import com.gorantokovic.kravolution.networking.InfiniteApi
-import kotlinx.android.synthetic.main.activity_login.*
 import com.gorantokovic.kravolution.networking.Result
+import com.gorantokovic.kravolution.views.Loader
+import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : BaseAuthActivity() {
 
@@ -74,10 +74,12 @@ class LoginActivity : BaseAuthActivity() {
         if (email.isEmpty() || password.isEmpty()) {
             showToast("All fields are required")
         }
+        Loader.show(this)
         InfiniteApi.login(email, password) {
+            Loader.remove()
             when (it) {
                 is Result.Success -> {
-                    Log.i("LoginActivity login", "Success: ${it.response.body()}")
+                    NavigationActivity.show(this)
                 }
                 is Result.Failure -> {
                     showToast(it.error.message)

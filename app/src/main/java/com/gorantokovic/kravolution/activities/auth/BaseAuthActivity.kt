@@ -6,11 +6,10 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.TextView
-import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.gorantokovic.kravolution.R
+import com.gorantokovic.kravolution.activities.BaseActivity
 
-abstract class BaseAuthActivity : AppCompatActivity() {
+abstract class BaseAuthActivity : BaseActivity() {
     private lateinit var titleTextView: TextView
     private lateinit var frameLayout: FrameLayout
 
@@ -48,9 +47,5 @@ abstract class BaseAuthActivity : AppCompatActivity() {
                 frameLayout.addView(clContent)
             }
         }
-    }
-
-    protected fun showToast(message: String) {
-        Toast.makeText(this, message, Toast.LENGTH_SHORT).show()
     }
 }

@@ -9,6 +9,7 @@ import android.widget.LinearLayout
 import androidx.viewpager2.widget.ViewPager2
 import com.gorantokovic.kravolution.R
 import com.gorantokovic.kravolution.activities.auth.LoginActivity
+import com.gorantokovic.kravolution.persistance.PreferenceManager
 import com.gorantokovic.kravolution.settings.Settings
 
 class OnboardingActivity : AppCompatActivity() {
@@ -53,6 +54,7 @@ class OnboardingActivity : AppCompatActivity() {
                 sliderViewPager.setCurrentItem(sliderViewPager.currentItem + 1, true)
             } else {
                 Settings.updateOnboardingStatus(this,true)
+                PreferenceManager.firstTimeRun = false
                 showAuth()
             }
         }

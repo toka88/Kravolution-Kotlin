@@ -6,6 +6,8 @@
     <!--    Screen titles   -->
     <string name="forgot_password_screen_title">Forgot password</string>
     <string name="reset_password_screen_title">Reset password</string>
+    <string name="shop_for_kit_screen_title">Shop for kit</string>
+    <string name="scheduler_screen_title">Scheduler</string>
 
     <!--    Buttons     -->
     <string name="submit_new_password_button_title">Submit</string>
@@ -27,4 +29,19 @@
 
     <!--    Info text   -->
     <string name="check_your_email_and_the_paste_the_reset_code_in_the_field_below">Check your email and the paste the reset code in the field below</string>
+    <string name="tap_in_to_assign_your_doJo">Tap in to assign your DoJo</string>
+
+    <!--    Menu items-->
+    <string name="your_profile_menu_item">Your profile</string>
+    <string name="my_passport_menu_item">My passport</string>
+    <string name="your_seminars_menu_item">Your seminars</string>
+    <string name="how_to_menu_item">How to</string>
+    <string name="sign_out_menu_item">Sign out</string>
+    <string name="privacy_policy_menu_item">Privacy policy</string>
+    <string name="terms_of_service_menu_item">Terms of service</string>
+    <string name="open_menu_content_description">Open menu</string>
+    <string name="event_status_canceled">Canceled</string>
+    <string name="no_events_yet">No events yet</string>
+    <string name="or">or</string>
+    <string name="already_have_a_code">Already have a code?</string>
 </resources>

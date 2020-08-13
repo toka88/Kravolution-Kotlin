@@ -37,11 +37,16 @@ class PreferenceManager {
 
         var user: User?
             get() {
-                return PreferenceManager.get("user")
+                return get("user")
             }
             set(value) {
-                PreferenceManager.put(value, "user")
+                put(value, "user")
             }
+
+        fun hasAuthenticated(): Boolean {
+            return accessToken != null
+        }
+
 
         fun clearUsersData() {
             PreferenceManager().mSharedPreferences
@@ -55,6 +60,18 @@ class PreferenceManager {
             PreferenceManager().mSharedPreferences
                 .edit()
                 .clear()
+                .apply()
+        }
+
+        var firstTimeRun: Boolean
+        get() {
+            return  PreferenceManager().mSharedPreferences
+                .getBoolean("first_time_run", true)
+        }
+        set(value) {
+            PreferenceManager().mSharedPreferences
+                .edit()
+                .putBoolean("first_time_run", value)
                 .apply()
         }
 

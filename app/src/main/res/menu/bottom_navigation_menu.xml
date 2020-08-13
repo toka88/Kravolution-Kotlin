@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/home"
+        android:icon="@drawable/navigation_icon_home"
+        android:title="" />
+    <item
+        android:id="@+id/shop"
+        android:icon="@drawable/navigation_icon_shop"
+        android:title="" />
+    <item
+        android:id="@+id/scheduler"
+        android:icon="@drawable/navigation_icon_calendar"
+        android:title="" />
+    <item
+        android:id="@+id/myBelt"
+        android:icon="@drawable/navigation_icon_belt"
+        android:title="" />
+    <item
+        android:id="@+id/myDojo"
+        android:icon="@drawable/navigation_icon_channel"
+        android:title="" />
+</menu>

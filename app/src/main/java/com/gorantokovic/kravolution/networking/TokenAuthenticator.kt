@@ -6,7 +6,7 @@ import okhttp3.Request
 import okhttp3.Response
 import okhttp3.Route
 
-class TokenAuthentificator : Authenticator {
+class TokenAuthenticator : Authenticator {
     override fun authenticate(route: Route?, response: Response): Request? {
         PreferenceManager.refreshToken?.let {
             val res = InfiniteApi.refreshToken(it).execute()

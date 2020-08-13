@@ -64,8 +64,8 @@ class ResetPasswordActivity : BaseAuthActivity() {
             Loader.remove()
             when (it) {
                 is Result.Success -> {
-                    it.response?.body()?.infoMessage?.let {
-                        showToast(it)
+                    it.response.body()?.infoMessage?.let { infoMessage ->
+                        showToast(infoMessage)
                         // TODO: Back to the root activity
                         finish()
                     }
