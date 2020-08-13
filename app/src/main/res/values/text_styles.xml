@@ -36,6 +36,11 @@
         <item name="android:textAlignment">center</item>
     </style>
 
+    <style name="NoEventsTextType" parent="DarkText">
+        <item name="fontFamily">@font/gigalypse</item>
+        <item name="android:textSize">@dimen/font_size_large</item>
+    </style>
+
     <!--    Use for primary and secondary button-->
     <style name="PrimaryActionTextType">
         <item name="fontFamily">@font/gigalypse</item>
@@ -56,6 +61,10 @@
 
     <style name="LightText">
         <item name="android:textColor">@color/lightTextColor</item>
+    </style>
+
+    <style name="DarkText">
+        <item name="android:textColor">@color/darkTextColor</item>
     </style>
 
     <!--    Calendar    -->

@@ -7,21 +7,24 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.TextView
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gorantokovic.kravolution.R
 import com.gorantokovic.kravolution.activities.navigation.BaseNavigationFragment
+import com.gorantokovic.kravolution.extensions.dayEndsAt
+import com.gorantokovic.kravolution.extensions.dayStartsAt
+import com.gorantokovic.kravolution.extensions.shiftedForMonths
 import com.gorantokovic.kravolution.networking.InfiniteApi
 import com.gorantokovic.kravolution.networking.Result
 import com.gorantokovic.kravolution.views.Loader
-import kotlinx.android.synthetic.main.fragment_scheduler.*
 import java.util.*
 
 class SchedulerFragment : BaseNavigationFragment() {
 
     private var firstTimeLoading: Boolean = true
     private lateinit var eventsAdapter: EventsAdapter
-    private lateinit var evetsRecyclerView: RecyclerView
+    private lateinit var startDate: Date
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -46,26 +49,31 @@ class SchedulerFragment : BaseNavigationFragment() {
     }
 
     private fun customizeView(view: View) {
+        // Title
         val titleTextView: TextView = view.findViewById(R.id.titleTextView)
         titleTextView.text = getString(R.string.scheduler_screen_title)
 
+        // Menu button
         val menuButton: ImageButton = view.findViewById(R.id.menuButton)
         menuButton.setOnClickListener {
             openDrawer()
         }
 
-        val calendarView: CalendarView = view.findViewById(R.id.calendarView)
-        calendarView.startDate = Date()
-        calendarView.onClickListener = {
-            Log.i("SchedulerFragment", "Date $it")
-        }
-
-        evetsRecyclerView = view.findViewById(R.id.eventsRecyclerView)
-        eventsAdapter = EventsAdapter()
-
-        evetsRecyclerView.layoutManager =
-            LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        // Events recycler view
+        var eventsRecyclerView: RecyclerView = view.findViewById(R.id.eventsRecyclerView)
+        val layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
+        eventsRecyclerView.layoutManager = layoutManager
+        eventsAdapter = EventsAdapter(context!!)
         eventsRecyclerView.adapter = eventsAdapter
+        val dividerItemDecoration = DividerItemDecoration(context, layoutManager.orientation)
+        eventsRecyclerView.addItemDecoration(dividerItemDecoration)
+
+        // Calendar view
+        val calendarView: CalendarView = view.findViewById(R.id.calendarView)
+        startDate = calendarView.startDate
+        calendarView.onClickListener = {
+            eventsAdapter.selectedDate = it
+        }
     }
 
     // Networking
@@ -77,12 +85,17 @@ class SchedulerFragment : BaseNavigationFragment() {
                 Loader.show(it)
             }
         }
-        InfiniteApi.fetchScheduler("1597149216", "1598443200") {
+        val startsAt = startDate.dayStartsAt()
+            .toString()
+        val endsAt = startDate.shiftedForMonths(1)
+            .dayEndsAt()
+            .toString()
+        InfiniteApi.fetchScheduler(startsAt, endsAt) {
             Loader.remove()
             when (it) {
                 is Result.Success -> {
-                    val events = it.response.body()?.let { events ->
-//                        eventsAdapter.updateData(events)
+                    it.response.body()?.let { events ->
+                        eventsAdapter.updateData(events)
                     }
                 }
                 is Result.Failure -> {

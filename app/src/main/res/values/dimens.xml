@@ -9,6 +9,7 @@
     <dimen name="editTextHeight">50dp</dimen>
 
     <!--    Padding     -->
+    <dimen name="padding_the_smallest">10dp</dimen>
     <dimen name="padding_smaller">10dp</dimen>
     <dimen name="padding_small">20dp</dimen>
     <dimen name="padding_scheduler">25dp</dimen>

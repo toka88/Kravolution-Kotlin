@@ -39,13 +39,14 @@ class CalendarView(context: Context, attrs: AttributeSet?) : LinearLayout(contex
         inflate(context, R.layout.calendar_view, this)
 
         recyclerView = findViewById(R.id.calendarRecyclerView)
-        recyclerView.adapter = CalendarAdapter()
+        recyclerView.adapter = CalendarAdapter(context)
     }
 }
 
-private class CalendarAdapter : RecyclerView.Adapter<CalendarAdapter.CalendarItemHolder>() {
+private class CalendarAdapter(val context: Context) : RecyclerView.Adapter<CalendarAdapter.CalendarItemHolder>() {
 
     private var visibleDates: ArrayList<Date> = ArrayList()
+    private var selectedIndex: Int = 0
 
     var startDate: Date = Date()
         set(value) {
@@ -72,23 +73,35 @@ private class CalendarAdapter : RecyclerView.Adapter<CalendarAdapter.CalendarIte
     }
 
     override fun onBindViewHolder(holder: CalendarItemHolder, position: Int) {
-        holder.update(visibleDates[position])
+        val selected: Boolean = position == selectedIndex
+        holder.update(context, selected, visibleDates[position])
         holder.itemView.setOnClickListener {
+            selectedIndex = position
             onClickListener?.let {
                 it(visibleDates[position])
             }
+            notifyDataSetChanged()
         }
     }
 
     // View holder
 
     class CalendarItemHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        private val dayInWeakTextView: TextView = itemView.findViewById(R.id.dayInWeakTextView)
-        private val dayInMonthTextView: TextView = itemView.findViewById(R.id.dayInMonthTextView)
+        private var dayInWeakTextView: TextView = itemView.findViewById(R.id.dayInWeakTextView)
+        private var dayInMonthTextView: TextView = itemView.findViewById(R.id.dayInMonthTextView)
 
-        fun update(date: Date) {
+        fun update(context: Context, selected: Boolean, date: Date) {
             dayInWeakTextView.text = DateFormatter.dayInWeak(date)
             dayInMonthTextView.text = DateFormatter.dayInMonth(date)
+            if (selected) {
+                itemView.background = context.getDrawable(R.drawable.calendar_background_selected)
+                dayInWeakTextView.setTextColor(context.getColor(R.color.lightTextColor))
+                dayInMonthTextView.setTextColor(context.getColor(R.color.lightTextColor))
+            } else {
+                itemView.background = context.getDrawable(R.drawable.calendar_background_unselected)
+                dayInWeakTextView.setTextColor(context.getColor(R.color.darkTextColor))
+                dayInMonthTextView.setTextColor(context.getColor(R.color.darkTextColor))
+            }
         }
     }
 
