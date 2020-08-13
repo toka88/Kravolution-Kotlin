@@ -50,6 +50,5 @@ fun Date.dayEndsAt(): Long {
 
 private fun localDateTimeToUnixTime(localDateTime: LocalDateTime): Long {
     val utc: DateTime = localDateTime.toDateTime(DateTimeZone.getDefault())
-    val secondsSinceEpoch = utc.millis / 1000
-    return secondsSinceEpoch
+    return utc.millis / 1000
 }

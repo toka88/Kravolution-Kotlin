@@ -27,15 +27,15 @@ class InfiniteApi {
             call.enqueue {
                 when (it) {
                     is Result.Success -> {
-                        val body = it.response.body()
-                        body?.accessToken?.let {
-                            PreferenceManager.accessToken = it
+                        val authResponse = it.response.body()
+                        authResponse?.accessToken?.let { accessToken ->
+                            PreferenceManager.accessToken = accessToken
                         }
-                        body?.refreshToken?.let {
-                            PreferenceManager.refreshToken = it
+                        authResponse?.refreshToken?.let { refreshToken ->
+                            PreferenceManager.refreshToken = refreshToken
                         }
-                        body?.user?.let {
-                            PreferenceManager.user = it
+                        authResponse?.user?.let { user ->
+                            PreferenceManager.user = user
                         }
                     }
                 }
@@ -57,14 +57,14 @@ class InfiniteApi {
                 when (it) {
                     is Result.Success -> {
                         val authResponse = it.response.body()
-                        authResponse?.accessToken?.let {
-                            PreferenceManager.accessToken = it
+                        authResponse?.accessToken?.let { accessToken ->
+                            PreferenceManager.accessToken = accessToken
                         }
-                        authResponse?.refreshToken?.let {
-                            PreferenceManager.refreshToken = it
+                        authResponse?.refreshToken?.let { refreshToken ->
+                            PreferenceManager.refreshToken = refreshToken
                         }
-                        authResponse?.user?.let {
-                            PreferenceManager.user = it
+                        authResponse?.user?.let { user ->
+                            PreferenceManager.user = user
                         }
                     }
                 }
@@ -106,7 +106,7 @@ class InfiniteApi {
             }
             return call
         }
-      
+
         // User
 
         fun getProfile(callback: (Result<User>) -> Unit): Call<User> {
@@ -119,7 +119,11 @@ class InfiniteApi {
 
         // Scheduler
 
-        fun fetchScheduler(from: String, to: String, callback: (Result<List<Event>>) -> Unit): Call<List<Event>> {
+        fun fetchScheduler(
+            from: String,
+            to: String,
+            callback: (Result<List<Event>>) -> Unit
+        ): Call<List<Event>> {
             val call = buildService(SchedulerInterface::class.java).getScheduler(from, to)
             call.enqueue {
                 return@enqueue callback(it)

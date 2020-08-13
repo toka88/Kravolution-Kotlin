@@ -55,7 +55,8 @@
                 app:layout_constraintEnd_toStartOf="@id/endGuideline"
                 app:layout_constraintStart_toEndOf="@id/startGuideline"
                 app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@drawable/icon_scan" />
+                app:srcCompat="@drawable/icon_scan"
+                tools:ignore="ContentDescription" />
 
 
         </androidx.constraintlayout.widget.ConstraintLayout>

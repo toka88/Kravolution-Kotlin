@@ -14,7 +14,8 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="50dp"
-        tools:srcCompat="@tools:sample/avatars" />
+        tools:srcCompat="@tools:sample/avatars"
+        tools:ignore="ContentDescription" />
 
     <EditText
         android:id="@+id/userNameEditText"
@@ -75,6 +76,7 @@
             android:layout_height="wrap_content"
             android:paddingStart="0dp"
             style="@style/TermsAndConditions"
-            android:text="@string/i_agree_to_the_terms_and_conditions"/>
+            android:text="@string/i_agree_to_the_terms_and_conditions"
+            tools:ignore="RtlSymmetry" />
     </LinearLayout>
 </RelativeLayout>

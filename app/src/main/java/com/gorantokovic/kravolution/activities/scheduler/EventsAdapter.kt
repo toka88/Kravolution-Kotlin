@@ -106,9 +106,7 @@ class EventsAdapter(val context: Context) : RecyclerView.Adapter<RecyclerView.Vi
         }
     }
 
-    class NoEventViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
-    }
+    class NoEventViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView)
 
     private fun filterEvents() {
         val startTimestamp = selectedDate.dayStartsAt()

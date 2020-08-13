@@ -49,7 +49,7 @@ class NavigationActivity : BaseActivity() {
         }
 
         // Menu recycler view
-        menuRecyclerView.adapter = NavigationAdapter(this) { view, itemType ->
+        menuRecyclerView.adapter = NavigationAdapter(this) { itemType ->
             handleMenuItemClick(itemType)
         }
         menuRecyclerView.layoutManager = LinearLayoutManager(this, RecyclerView.VERTICAL, false)
@@ -75,6 +75,7 @@ class NavigationActivity : BaseActivity() {
                 PreferenceManager.clearUsersData()
                 MainActivity.show(this)
             }
+            else -> {}
         }
         showToast("Clicked on $itemType")
     }

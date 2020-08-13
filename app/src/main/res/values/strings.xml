@@ -42,4 +42,6 @@
     <string name="open_menu_content_description">Open menu</string>
     <string name="event_status_canceled">Canceled</string>
     <string name="no_events_yet">No events yet</string>
+    <string name="or">or</string>
+    <string name="already_have_a_code">Already have a code?</string>
 </resources>

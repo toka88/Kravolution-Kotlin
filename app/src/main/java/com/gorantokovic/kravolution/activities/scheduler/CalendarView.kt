@@ -114,10 +114,10 @@ private class CalendarAdapter(val context: Context) : RecyclerView.Adapter<Calen
         val endCalendar = Calendar.getInstance()
         endCalendar.time = startDate
         endCalendar.add(Calendar.MONTH, 1)   // Date shifted for 1 month
-        var dates: ArrayList<Date> = ArrayList()
+        val dates: ArrayList<Date> = ArrayList()
 
         while (!startCalendar.after(endCalendar)) {
-            dates.add(startCalendar.getTime())
+            dates.add(startCalendar.time)
             startCalendar.add(Calendar.DATE, 1)
         }
 

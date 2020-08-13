@@ -10,7 +10,7 @@ import com.gorantokovic.kravolution.R
 
 class NavigationAdapter(
     private val context: Context,
-    private val onClickListener: (View, MenuItemType) -> Unit
+    private val onClickListener: (MenuItemType) -> Unit
 ) :
     RecyclerView.Adapter<NavigationAdapter.PrimaryViewHolder>() {
 
@@ -40,7 +40,7 @@ class NavigationAdapter(
         val itemType = menuItems[position]
         holder.update(itemType.title(context))
         holder.itemView.setOnClickListener {
-            onClickListener(it, itemType)
+            onClickListener(itemType)
         }
     }
 

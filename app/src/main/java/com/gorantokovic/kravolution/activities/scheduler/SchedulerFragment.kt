@@ -1,7 +1,6 @@
 package com.gorantokovic.kravolution.activities.scheduler
 
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -60,7 +59,7 @@ class SchedulerFragment : BaseNavigationFragment() {
         }
 
         // Events recycler view
-        var eventsRecyclerView: RecyclerView = view.findViewById(R.id.eventsRecyclerView)
+        val eventsRecyclerView: RecyclerView = view.findViewById(R.id.eventsRecyclerView)
         val layoutManager = LinearLayoutManager(context, LinearLayoutManager.VERTICAL, false)
         eventsRecyclerView.layoutManager = layoutManager
         eventsAdapter = EventsAdapter(context!!)

@@ -22,7 +22,9 @@
             android:layout_width="match_parent"
             android:layout_height="@dimen/editTextHeight"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:autofillHints="email"
+            tools:ignore="LabelFor" />
 
         <EditText
             android:id="@+id/passwordEditText"
@@ -31,7 +33,9 @@
             android:layout_height="@dimen/editTextHeight"
             android:drawableTint="@color/lightTextColor"
             android:layout_below="@id/emailEditText"
-            android:layout_centerHorizontal="true" />
+            android:layout_centerHorizontal="true"
+            android:autofillHints="password"
+            tools:ignore="LabelFor" />
 
         <Button
             android:id="@+id/resetPasswordButton"
