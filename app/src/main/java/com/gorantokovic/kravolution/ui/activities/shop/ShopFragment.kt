@@ -1,4 +1,4 @@
-package com.gorantokovic.kravolution.activities.shop
+package com.gorantokovic.kravolution.ui.activities.shop
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,7 +8,7 @@ import android.webkit.WebView
 import android.widget.ImageButton
 import android.widget.TextView
 import com.gorantokovic.kravolution.R
-import com.gorantokovic.kravolution.activities.navigation.BaseNavigationFragment
+import com.gorantokovic.kravolution.ui.activities.navigation.BaseNavigationFragment
 
 class ShopFragment : BaseNavigationFragment() {
 

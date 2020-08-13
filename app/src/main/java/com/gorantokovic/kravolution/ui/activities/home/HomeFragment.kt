@@ -1,4 +1,4 @@
-package com.gorantokovic.kravolution.activities.home
+package com.gorantokovic.kravolution.ui.activities.home
 
 import android.os.Bundle
 import android.util.Log
@@ -7,7 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import com.gorantokovic.kravolution.R
-import com.gorantokovic.kravolution.activities.navigation.BaseNavigationFragment
+import com.gorantokovic.kravolution.ui.activities.navigation.BaseNavigationFragment
 
 class HomeFragment : BaseNavigationFragment() {
 

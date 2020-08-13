@@ -1,4 +1,4 @@
-package com.gorantokovic.kravolution.activities.scheduler
+package com.gorantokovic.kravolution.ui.activities.scheduler
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,13 +10,13 @@ import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gorantokovic.kravolution.R
-import com.gorantokovic.kravolution.activities.navigation.BaseNavigationFragment
+import com.gorantokovic.kravolution.ui.activities.navigation.BaseNavigationFragment
 import com.gorantokovic.kravolution.extensions.dayEndsAt
 import com.gorantokovic.kravolution.extensions.dayStartsAt
 import com.gorantokovic.kravolution.extensions.shiftedForMonths
 import com.gorantokovic.kravolution.networking.InfiniteApi
 import com.gorantokovic.kravolution.networking.Result
-import com.gorantokovic.kravolution.views.Loader
+import com.gorantokovic.kravolution.ui.views.Loader
 import java.util.*
 
 class SchedulerFragment : BaseNavigationFragment() {

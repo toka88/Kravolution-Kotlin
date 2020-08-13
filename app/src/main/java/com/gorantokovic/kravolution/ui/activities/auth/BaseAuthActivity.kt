@@ -1,4 +1,4 @@
-package com.gorantokovic.kravolution.activities.auth
+package com.gorantokovic.kravolution.ui.activities.auth
 
 import android.content.Context
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import android.widget.FrameLayout
 import android.widget.TextView
 import com.gorantokovic.kravolution.R
-import com.gorantokovic.kravolution.activities.BaseActivity
+import com.gorantokovic.kravolution.ui.activities.BaseActivity
 
 abstract class BaseAuthActivity : BaseActivity() {
     private lateinit var titleTextView: TextView

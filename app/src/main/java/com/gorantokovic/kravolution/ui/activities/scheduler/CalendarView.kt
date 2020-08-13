@@ -1,4 +1,4 @@
-package com.gorantokovic.kravolution.activities.scheduler
+package com.gorantokovic.kravolution.ui.activities.scheduler
 
 import android.content.Context
 import android.util.AttributeSet

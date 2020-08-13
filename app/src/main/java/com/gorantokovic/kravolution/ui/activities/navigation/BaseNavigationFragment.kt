@@ -1,6 +1,6 @@
-package com.gorantokovic.kravolution.activities.navigation
+package com.gorantokovic.kravolution.ui.activities.navigation
 
-import com.gorantokovic.kravolution.activities.BaseFragment
+import com.gorantokovic.kravolution.ui.activities.BaseFragment
 
 abstract class BaseNavigationFragment: BaseFragment() {
     abstract fun getBackgroundDrawableId(): Int

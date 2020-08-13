@@ -1,4 +1,4 @@
-package com.gorantokovic.kravolution.activities.onboarding
+package com.gorantokovic.kravolution.ui.activities.onboarding
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import androidx.viewpager2.widget.ViewPager2
 import com.gorantokovic.kravolution.R
-import com.gorantokovic.kravolution.activities.auth.LoginActivity
+import com.gorantokovic.kravolution.ui.activities.auth.LoginActivity
 import com.gorantokovic.kravolution.persistance.PreferenceManager
 import com.gorantokovic.kravolution.settings.Settings
 

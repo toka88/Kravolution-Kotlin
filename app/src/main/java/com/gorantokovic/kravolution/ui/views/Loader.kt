@@ -1,4 +1,4 @@
-package com.gorantokovic.kravolution.views
+package com.gorantokovic.kravolution.ui.views
 
 import android.content.Context
 

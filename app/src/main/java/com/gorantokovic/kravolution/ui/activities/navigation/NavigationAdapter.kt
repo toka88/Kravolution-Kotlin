@@ -1,4 +1,4 @@
-package com.gorantokovic.kravolution.activities.navigation
+package com.gorantokovic.kravolution.ui.activities.navigation
 
 import android.content.Context
 import android.view.LayoutInflater

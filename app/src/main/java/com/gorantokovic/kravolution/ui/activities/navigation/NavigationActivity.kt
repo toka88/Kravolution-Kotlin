@@ -1,4 +1,4 @@
-package com.gorantokovic.kravolution.activities.navigation
+package com.gorantokovic.kravolution.ui.activities.navigation
 
 import android.content.Context
 import android.content.Intent
@@ -11,10 +11,10 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gorantokovic.kravolution.MainActivity
 import com.gorantokovic.kravolution.R
-import com.gorantokovic.kravolution.activities.BaseActivity
-import com.gorantokovic.kravolution.activities.home.HomeFragment
-import com.gorantokovic.kravolution.activities.scheduler.SchedulerFragment
-import com.gorantokovic.kravolution.activities.shop.ShopFragment
+import com.gorantokovic.kravolution.ui.activities.BaseActivity
+import com.gorantokovic.kravolution.ui.activities.home.HomeFragment
+import com.gorantokovic.kravolution.ui.activities.scheduler.SchedulerFragment
+import com.gorantokovic.kravolution.ui.activities.shop.ShopFragment
 import com.gorantokovic.kravolution.persistance.PreferenceManager
 import kotlinx.android.synthetic.main.activity_navigation.*
 

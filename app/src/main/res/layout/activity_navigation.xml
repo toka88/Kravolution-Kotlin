@@ -46,7 +46,7 @@
             android:alpha="0.5"
             android:background="@color/colorAccent"
             android:gravity="start"
-            tools:context=".activities.navigation.NavigationActivity">
+            tools:context=".ui.activities.navigation.NavigationActivity">
 
             <Button
                 android:id="@+id/closeButton"

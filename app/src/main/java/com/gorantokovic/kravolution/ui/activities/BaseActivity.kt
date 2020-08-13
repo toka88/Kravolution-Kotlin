@@ -1,4 +1,4 @@
-package com.gorantokovic.kravolution.activities
+package com.gorantokovic.kravolution.ui.activities
 
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity

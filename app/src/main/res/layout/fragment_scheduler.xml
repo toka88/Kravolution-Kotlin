@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".activities.scheduler.SchedulerFragment">
+    tools:context=".ui.activities.scheduler.SchedulerFragment">
 
     <include
         layout="@layout/header"
@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true" />
 
-    <com.gorantokovic.kravolution.activities.scheduler.CalendarView
+    <com.gorantokovic.kravolution.ui.activities.scheduler.CalendarView
         android:id="@+id/calendarView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

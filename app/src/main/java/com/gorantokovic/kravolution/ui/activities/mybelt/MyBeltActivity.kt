@@ -1,12 +1,12 @@
-package com.gorantokovic.kravolution.activities.dojo
+package com.gorantokovic.kravolution.ui.activities.mybelt
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.gorantokovic.kravolution.R
 
-class DojoActivity : AppCompatActivity() {
+class MyBeltActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_dojo)
+        setContentView(R.layout.activity_my_belt)
     }
 }

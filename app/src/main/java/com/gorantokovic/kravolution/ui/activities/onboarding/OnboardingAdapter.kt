@@ -1,4 +1,4 @@
-package com.gorantokovic.kravolution.activities.onboarding
+package com.gorantokovic.kravolution.ui.activities.onboarding
 
 import android.view.LayoutInflater
 import android.view.View

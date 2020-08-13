@@ -5,9 +5,9 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.gorantokovic.kravolution.activities.auth.LoginActivity
-import com.gorantokovic.kravolution.activities.navigation.NavigationActivity
-import com.gorantokovic.kravolution.activities.onboarding.OnboardingActivity
+import com.gorantokovic.kravolution.ui.activities.auth.LoginActivity
+import com.gorantokovic.kravolution.ui.activities.navigation.NavigationActivity
+import com.gorantokovic.kravolution.ui.activities.onboarding.OnboardingActivity
 import com.gorantokovic.kravolution.persistance.PreferenceManager
 import java.util.*
 import kotlin.concurrent.schedule

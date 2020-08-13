@@ -1,14 +1,14 @@
-package com.gorantokovic.kravolution.activities.auth
+package com.gorantokovic.kravolution.ui.activities.auth
 
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import com.gorantokovic.kravolution.R
-import com.gorantokovic.kravolution.activities.navigation.NavigationActivity
+import com.gorantokovic.kravolution.ui.activities.navigation.NavigationActivity
 import com.gorantokovic.kravolution.extensions.afterTextChanged
 import com.gorantokovic.kravolution.networking.InfiniteApi
 import com.gorantokovic.kravolution.networking.Result
-import com.gorantokovic.kravolution.views.Loader
+import com.gorantokovic.kravolution.ui.views.Loader
 import kotlinx.android.synthetic.main.activity_register.*
 
 class RegisterActivity : BaseAuthActivity() {
